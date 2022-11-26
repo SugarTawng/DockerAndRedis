@@ -38,3 +38,16 @@ docker run -d --rm --name redis-2 `
     --net redis `
     -v ${PWD}/redis-2:/etc/redis/ `
     redis:6.0-alpine redis-server /etc/redis/redis.conf
+
+## Test Replication
+
+Technically written data should now be on the replicas
+
+```
+# go to one of the clients
+docker exec -it redis-2 sh
+redis-cli
+auth "a-very-complex-password-here"
+keys *
+
+```
