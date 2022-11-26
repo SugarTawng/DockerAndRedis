@@ -12,7 +12,11 @@ Set up a Redis database management system using Docker, Set up a Redis replicati
 
 # Commandline for demo redis replication on docker:
 
+# 1. network
 docker network create redis
+
+# 2. clustering
+
 #redis-0
 docker run -d --rm --name redis-0 `
     --net redis `
