@@ -29,6 +29,7 @@ docker run -d --rm --name redis-1 `
     -v ${PWD}/redis-1:/etc/redis/ `
     redis:6.0-alpine redis-server /etc/redis/redis.conf
 
+
 #redis-2
 docker run -d --rm --name redis-2 `
     --net redis `
