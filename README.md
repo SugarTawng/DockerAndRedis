@@ -18,12 +18,14 @@ docker network create redis
 # 2. clustering
 
 #redis-0
+
 docker run -d --rm --name redis-0 `
     --net redis `
     -v ${PWD}/redis-0:/etc/redis/ `
     redis:6.0-alpine redis-server /etc/redis/redis.conf
 
 #redis-1
+
 docker run -d --rm --name redis-1 `
     --net redis `
     -v ${PWD}/redis-1:/etc/redis/ `
@@ -31,6 +33,7 @@ docker run -d --rm --name redis-1 `
 
 
 #redis-2
+
 docker run -d --rm --name redis-2 `
     --net redis `
     -v ${PWD}/redis-2:/etc/redis/ `
